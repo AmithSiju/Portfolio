@@ -29,8 +29,8 @@ body {
     width: 175px;
     background-color: #11a303;
     color: #fff;
-    display: flex;
-    flex-direction: column;
+    display: flex;display: flex;
+    flex-wrap: wrap;
     align-items: center;
     padding: 20px;
     position: fixed;
@@ -138,7 +138,7 @@ h2 {
 }
 
 .container4 {
-    width: 175vh;
+    width: 100vw;
     height: 100vh;
     margin-top: -65px;
     margin-left: -32px;
@@ -146,14 +146,19 @@ h2 {
     background-size: cover;
     background-position:center;
     display: flex;
+    overflow:hidden ;
     align-items: center;
     justify-content: left;
     padding-left:25px; 
     padding-top: 10px;/* Adjust padding to move text */
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 
 .text-box {
     color: white;
+    position: sticky;
 }
 
 .text-box h1 {
@@ -260,10 +265,13 @@ button#loadMore:hover, button#showLess:hover  {
 
 .container2 {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between; 
     align-items: flex-start; 
-    padding: 20px;
     gap: 20px;
+    max-width: 1200px; /* or any width that fits */
+    margin: 0 auto; /* Centers the container */
+    padding: 0 20px; /* Adds some padding for smaller devices */
 }
 
 .contact-form,
@@ -327,7 +335,7 @@ button#loadMore:hover, button#showLess:hover  {
 }
 
 .container3 {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     background-color: #fff;
     padding: 20px;
@@ -337,6 +345,7 @@ button#loadMore:hover, button#showLess:hover  {
 
 .flex-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 0;
 }
@@ -399,4 +408,54 @@ footer {
     text-align: center;
     padding: 1em 0;
     margin-top: 2em;
+}
+
+/* Large screens, desktops */
+@media (min-width: 1200px) {
+    /* Adjust the sizes or layout for desktop view here */
+  }
+  
+  /* Tablets and smaller desktops */
+  @media (min-width: 768px) and (max-width: 1199px) {
+    /* Adjust layout for tablets */
+    .photo {
+      width: 100%;
+      height: auto;
+    }
+  
+    .gallery {
+      grid-template-columns: repeat(2, 1fr); /* Adjust grid layout for smaller screens */
+    }
+  }
+  
+  /* Mobile screens */
+  @media (max-width: 767px) {
+    /* Adjust layout for mobile view */
+    .sidebar {
+      width: 100px; /* Smaller sidebar */
+    }
+  
+    .main-content {
+      margin-left: 100px; /* Adjust content margin */
+    }
+  
+    .gallery {
+      grid-template-columns: 1fr; /* Single column layout on mobile */
+    }
+  
+    .profile img {
+      width: 100px; /* Adjust image size */
+      height: 100px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        width: 100%;
+        margin: 0; /* Ensure no side margins on mobile */
+    }
 }
