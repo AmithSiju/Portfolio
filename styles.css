@@ -138,7 +138,11 @@ h2 {
 }
 
 .container4 {
+<<<<<<< HEAD
     width: 100vw;
+=======
+
+>>>>>>> ab5935cac717bc011ef2af13b37b1c275eeb8d0f
     height: 100vh;
     margin-top: -65px;
     margin-left: -32px;
