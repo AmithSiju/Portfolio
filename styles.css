@@ -459,7 +459,6 @@ footer {
         margin: 0; /* Ensure no side margins on mobile */
     }
 }
-
 @media (max-width: 768px) {
     .sidebar {
         position: relative;
