@@ -138,11 +138,7 @@ h2 {
 }
 
 .container4 {
-<<<<<<< HEAD
     width: 100vw;
-=======
-
->>>>>>> ab5935cac717bc011ef2af13b37b1c275eeb8d0f
     height: 100vh;
     margin-top: -65px;
     margin-left: -32px;
@@ -461,5 +457,19 @@ footer {
     .left, .right {
         width: 100%;
         margin: 0; /* Ensure no side margins on mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .sidebar nav ul li a {
+        font-size: 18px;
+        display: inline-block;
     }
 }
